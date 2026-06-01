@@ -29,6 +29,27 @@ window.populateQuery = function(schemeName) {
   queryInput.focus();
 };
 
+// Sidebar visibility toggle
+window.toggleSidebar = function() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.classList.toggle('collapsed');
+};
+
+// Theme toggle
+window.toggleTheme = function() {
+  const isLight = document.body.classList.toggle('light-theme');
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  document.getElementById('theme-icon-sun').style.display = isLight ? 'none' : 'block';
+  document.getElementById('theme-icon-moon').style.display = isLight ? 'block' : 'none';
+};
+
+// Initialize theme on load
+if (localStorage.getItem('theme') === 'light') {
+  document.body.classList.add('light-theme');
+  document.getElementById('theme-icon-sun').style.display = 'none';
+  document.getElementById('theme-icon-moon').style.display = 'block';
+}
+
 // Example card triggers
 window.runExample = function(queryText) {
   queryInput.value = queryText;
@@ -49,15 +70,52 @@ function appendMessage(sender, text, citation = null, footer = null, isRefusal =
     bubble.classList.add('refusal');
   }
 
-  // Format link markdown inside text
-  let formattedText = text.replace(/\[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)/g, '<a href="$2" target="_blank" class="citation-link">$1</a>');
-  bubble.innerHTML = `<p>${formattedText}</p>`;
+  // Mini markdown renderer
+  function renderMarkdown(raw) {
+    // 1. Markdown links → <a>
+    let html = raw.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
+      '<a href="$2" target="_blank" class="citation-link">$1</a>');
+
+    // 2. Bold **text**
+    html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+
+    // 3. Split into lines and detect list items
+    const lines = html.split(/\n/);
+    let result = '';
+    let inOl = false;
+    let inUl = false;
+
+    lines.forEach(line => {
+      const trimmed = line.trim();
+      const olMatch = trimmed.match(/^(\d+)\.\s+(.+)/);   // numbered list
+      const ulMatch = trimmed.match(/^[-*]\s+(.+)/);       // bullet list
+
+      if (olMatch) {
+        if (!inOl) { if (inUl) { result += '</ul>'; inUl = false; } result += '<ol>'; inOl = true; }
+        result += `<li>${olMatch[2]}</li>`;
+      } else if (ulMatch) {
+        if (!inUl) { if (inOl) { result += '</ol>'; inOl = false; } result += '<ul>'; inUl = true; }
+        result += `<li>${ulMatch[1]}</li>`;
+      } else {
+        if (inOl) { result += '</ol>'; inOl = false; }
+        if (inUl) { result += '</ul>'; inUl = false; }
+        if (trimmed) result += `<p>${trimmed}</p>`;
+      }
+    });
+
+    if (inOl) result += '</ol>';
+    if (inUl) result += '</ul>';
+    return result;
+  }
+
+  bubble.innerHTML = renderMarkdown(text);
+
 
   if (sender === 'bot') {
-    if (citation && !text.includes(citation)) {
+    if (citation) {
       const citationDiv = document.createElement('div');
       citationDiv.className = 'bot-citation';
-      citationDiv.innerHTML = `Source: <a href="${citation}" target="_blank" class="citation-link">Official Document</a>`;
+      citationDiv.innerHTML = `📄 Source: <a href="${citation}" target="_blank" class="citation-link">Official Factsheet ↗</a>`;
       bubble.appendChild(citationDiv);
     }
     

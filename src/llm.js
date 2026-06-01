@@ -15,10 +15,10 @@ function extractLinks(text) {
   if (!text) return [];
   const mdLinkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)/g;
   const rawUrlRegex = /(https?:\/\/[^\s\)]+)/g;
-  
+
   const links = [];
   let match;
-  
+
   // Find markdown links first
   while ((match = mdLinkRegex.exec(text)) !== null) {
     links.push({
@@ -46,10 +46,10 @@ function extractLinks(text) {
 
 export async function processFactualQuery(query, resolvedSchemeName) {
   const db = new VectorDB();
-  
+
   // 1. Faceted retrieval filtered by resolved scheme name
-  const contextChunks = db.searchHybrid(query, { scheme_name: resolvedSchemeName }, 3);
-  
+  const contextChunks = await db.searchHybrid(query, { scheme_name: resolvedSchemeName }, 3);
+
   if (contextChunks.length === 0) {
     return {
       success: false,
@@ -64,18 +64,17 @@ export async function processFactualQuery(query, resolvedSchemeName) {
   const sourceUrl = contextChunks[0].metadata.source_url;
   const lastUpdated = contextChunks[0].metadata.last_updated;
 
-  // Build zero-tolerance system prompt
+  // Build system prompt – citation link is handled by the UI Source row, not the LLM
   const systemPrompt = `You are a compliance-first mutual fund FAQ assistant. Your core philosophy is: "Accuracy over Intelligence".
 Your job is to answer the user query based ONLY on the provided context chunks.
 
 Strict Rules:
 1. Answer using ONLY the facts explicitly mentioned in the context. If the fact is not in the context, say "I'm sorry, but that information is not available in the official documentation."
 2. Do NOT speculate, extrapolate, or provide opinions or recommendations.
-3. Write a maximum of 3 sentences.
-4. You MUST include exactly one citation link to the source document in markdown format, using the exact URL: ${sourceUrl}
-Example citation format: [official factsheet](${sourceUrl})
-5. Do NOT include any other URLs or links.
-6. Return only the response text. Do not append footers or disclaimer notes.`;
+3. Write the answer to the user query clearly and concisely.
+4. If the answer involves steps or a list, format each item on a new line as a numbered list (e.g. "1. Step one\n2. Step two\n3. Step three").
+5. Do NOT include any URLs, links, or "for more information" statements. The citation will be shown separately.
+6. Return only the factual answer text. Do not append footers, disclaimer notes, or source references.`;
 
   const userPrompt = `Context:\n${contextText}\n\nQuery: ${query}`;
   const apiKey = process.env.LLM_API_KEY;
@@ -113,44 +112,28 @@ Example citation format: [official factsheet](${sourceUrl})
     }
 
     const rawResponse = data.choices[0].message.content.trim();
-    
-    // Output Validation & Verification
-    const sentenceCount = countSentences(rawResponse);
-    const links = extractLinks(rawResponse);
-    
-    // Check 1: Sentence count <= 3
-    const isSentenceCountValid = sentenceCount <= 3;
-    
-    // Check 2: Citation link counts == 1
-    const isLinkCountValid = links.length === 1;
-    
-    // Check 3: Citation URL matches the official source_url
-    const isUrlMatch = links.length > 0 && links[0].url === sourceUrl;
+    console.log(`[LLM Raw Response] ${rawResponse.substring(0, 200)}...`);
 
-    if (isSentenceCountValid && isLinkCountValid && isUrlMatch) {
-      // Successful validated compliance pathway
-      return {
-        success: true,
-        answer: rawResponse,
-        citation_url: sourceUrl,
-        last_updated: lastUpdated
-      };
-    } else {
-      console.warn(`LLM Compliance Check failed. Sentences: ${sentenceCount} (Valid: ${isSentenceCountValid}), Links Count: ${links.length} (Valid: ${isLinkCountValid}), URL Match: (Valid: ${isUrlMatch}). Executing fallback.`);
-      
-      // Fallback pathway
-      const fallbackText = `According to the official documents for ${resolvedSchemeName}, the details regarding your query can be verified in the [official factsheet](${sourceUrl}).`;
-      
-      return {
-        success: true,
-        answer: fallbackText,
-        citation_url: sourceUrl,
-        last_updated: lastUpdated
-      };
-    }
+    // Strip any citation/reference sentences the LLM may add despite instructions.
+    // Patterns: "For more information...", "refer to the official...", markdown links, raw URLs.
+    const cleanAnswer = rawResponse
+      // Remove markdown links entirely: [text](url)
+      .replace(/\[([^\]]+)\]\(https?:\/\/[^\s)]+\)/g, '$1')
+      // Remove raw URLs
+      .replace(/https?:\/\/[^\s)]+/g, '')
+      // Remove trailing sentences that reference sources/factsheets
+      .replace(/[^.!?]*\b(for more information|refer to|official factsheet|more detail|please visit|source document)[^.!?]*[.!?]?\s*$/gi, '')
+      .trim();
+
+    return {
+      success: true,
+      answer: cleanAnswer || rawResponse, // fallback to raw if stripping removed everything
+      citation_url: sourceUrl,
+      last_updated: lastUpdated
+    };
   } catch (error) {
     console.error('LLM API Call failed:', error);
-    
+
     // Fallback on total connection/processing error
     return {
       success: true,

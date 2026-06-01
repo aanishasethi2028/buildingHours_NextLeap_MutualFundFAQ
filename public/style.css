@@ -2,6 +2,7 @@
   --bg-dark: #090d16;
   --bg-panel: #121824;
   --bg-card: #1c2333;
+  --bg-header: rgba(9, 13, 22, 0.8);
   --bg-input: #151b26;
   --border-color: #2b354a;
   
@@ -23,6 +24,25 @@
   --border-radius-md: 10px;
 }
 
+body.light-theme {
+  --bg-dark: #f0f4f8;
+  --bg-panel: #ffffff;
+  --bg-card: #ffffff;
+  --bg-header: rgba(255, 255, 255, 0.8);
+  --bg-input: #f8fafc;
+  --border-color: #e2e8f0;
+  
+  --primary: #0284c7; /* Sky blue */
+  --primary-glow: rgba(2, 132, 199, 0.15);
+  --secondary: #7c3aed; /* Violet */
+  --accent-green: #059669; /* Emerald */
+  --accent-orange: #d97706; /* Amber */
+  
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --text-inverse: #ffffff;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -38,16 +58,17 @@ body {
   height: 100vh;
   overflow: hidden;
   line-height: 1.5;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* 1. Disclaimer Sticky Banner */
-.disclaimer-banner {
-  background: linear-gradient(90deg, rgba(255, 159, 0, 0.1) 0%, rgba(189, 0, 255, 0.05) 100%);
-  border-bottom: 1px solid rgba(255, 159, 0, 0.3);
+/* Disclaimer Footer Banner */
+.disclaimer-footer {
+  background: linear-gradient(90deg, rgba(255, 159, 0, 0.08) 0%, rgba(189, 0, 255, 0.04) 100%);
+  border-top: 1px solid rgba(255, 159, 0, 0.25);
   padding: 8px 16px;
   text-align: center;
   z-index: 1000;
-  animation: fadeInDown 0.5s ease-out;
+  flex-shrink: 0;
 }
 
 .disclaimer-content {
@@ -68,7 +89,7 @@ body {
 .app-container {
   display: flex;
   flex: 1;
-  height: calc(100vh - 38px); /* Account for disclaimer banner */
+  min-height: 0; /* critical: allows flex child to shrink below content size */
   overflow: hidden;
 }
 
@@ -81,7 +102,34 @@ body {
   flex-direction: column;
   padding: 24px 16px;
   overflow-y: auto;
+  transition: width 0.3s ease, padding 0.3s ease;
 }
+
+.sidebar.collapsed {
+  width: 0;
+  padding-left: 0;
+  padding-right: 0;
+  border-right: none;
+  overflow: hidden;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: var(--text-main);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.icon-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 
 .sidebar-header {
   margin-bottom: 24px;
@@ -144,8 +192,9 @@ body {
   align-items: center;
   padding: 16px 32px;
   border-bottom: 1px solid var(--border-color);
-  background: rgba(9, 13, 22, 0.8);
+  background: var(--bg-header);
   backdrop-filter: blur(10px);
+  transition: background-color 0.4s ease;
   z-index: 10;
 }
 
@@ -155,16 +204,16 @@ body {
   gap: 12px;
 }
 
-.logo-badge {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  color: var(--bg-dark);
-  font-family: var(--font-header);
-  font-weight: 800;
-  font-size: 0.9rem;
-  padding: 4px 8px;
-  border-radius: 6px;
-  letter-spacing: 1px;
+.logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-glow);
+  padding: 6px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--primary-glow);
 }
+
 
 .logo-area h1 {
   font-family: var(--font-header);
@@ -351,11 +400,14 @@ body {
 }
 
 .bot-citation {
-  margin-top: 10px;
-  font-size: 0.8rem;
-  display: inline-flex;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .citation-link {
@@ -380,6 +432,42 @@ body {
   border-top: 1px solid var(--border-color);
   padding-top: 8px;
 }
+
+/* List formatting inside bot answers */
+.chat-bubble ol,
+.chat-bubble ul {
+  margin: 8px 0 4px 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.chat-bubble ol {
+  list-style: decimal;
+}
+
+.chat-bubble ul {
+  list-style: disc;
+}
+
+.chat-bubble li {
+  font-size: 0.93rem;
+  line-height: 1.6;
+  color: var(--text-main);
+  padding-left: 4px;
+}
+
+.chat-bubble li::marker {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.chat-bubble p + ol,
+.chat-bubble p + ul {
+  margin-top: 10px;
+}
+
 
 /* 4. Live Pipeline Progress Indicator */
 .pipeline-indicator {
