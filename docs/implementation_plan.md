@@ -205,4 +205,5 @@ Perform compliance validations on all pipelines.
     *   [x] Test advisory queries route to SEBI portal.
     *   [x] Test performance queries bypass LLM and route to factsheet URLs.
     *   [x] Confirm factual answers are under 3 sentences and cite correct URLs.
+    *   [x] Ensure daily ingestion scheduler runs at 10:00 AM IST via node-cron.
 *   **Result**: Audited and compliant deployment-ready codebase.

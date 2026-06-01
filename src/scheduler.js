@@ -1,6 +1,5 @@
 import { runIngestion } from './ingestion.js';
-
-const MILLISECONDS_IN_A_DAY = 24 * 60 * 60 * 1000;
+import cron from 'node-cron';
 
 export function startScheduler() {
   console.log(`[${new Date().toISOString()}] Initializing Daily Ingestion Scheduler...`);
@@ -12,15 +11,19 @@ export function startScheduler() {
     console.error('Error running startup ingestion:', error);
   }
 
-  // Set recurring daily interval (24 hours)
-  const timerId = setInterval(() => {
-    console.log(`[${new Date().toISOString()}] Ingestion Scheduler Trigger: Executing daily ingestion...`);
+  // Set recurring daily schedule at 10:00 AM IST
+  // IST is UTC+5:30. "0 10 * * *" with timezone 'Asia/Kolkata' handles it correctly.
+  const task = cron.schedule('0 10 * * *', () => {
+    console.log(`[${new Date().toISOString()}] Ingestion Scheduler Trigger: Executing daily ingestion (10:00 AM IST)...`);
     try {
       runIngestion();
     } catch (e) {
       console.error('Error executing scheduled daily ingestion:', e);
     }
-  }, MILLISECONDS_IN_A_DAY);
+  }, {
+    scheduled: true,
+    timezone: 'Asia/Kolkata'
+  });
 
   // Return trigger controls for testability
   return {
@@ -29,7 +32,7 @@ export function startScheduler() {
       return runIngestion();
     },
     stop: () => {
-      clearInterval(timerId);
+      task.stop();
       console.log(`[${new Date().toISOString()}] Scheduler Stopped.`);
     }
   };
