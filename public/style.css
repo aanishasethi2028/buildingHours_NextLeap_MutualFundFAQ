@@ -1,0 +1,516 @@
+:root {
+  --bg-dark: #090d16;
+  --bg-panel: #121824;
+  --bg-card: #1c2333;
+  --bg-input: #151b26;
+  --border-color: #2b354a;
+  
+  --primary: #00ffff; /* Neon cyan */
+  --primary-glow: rgba(0, 255, 255, 0.15);
+  --secondary: #bd00ff; /* Purple accent */
+  --accent-green: #39ff14; /* Neon green */
+  --accent-orange: #ff9f00; /* Soft amber warnings */
+  
+  --text-main: #f0f4f9;
+  --text-muted: #8b9bb4;
+  --text-inverse: #0d1117;
+  
+  --font-header: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --border-radius-lg: 16px;
+  --border-radius-md: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+/* 1. Disclaimer Sticky Banner */
+.disclaimer-banner {
+  background: linear-gradient(90deg, rgba(255, 159, 0, 0.1) 0%, rgba(189, 0, 255, 0.05) 100%);
+  border-bottom: 1px solid rgba(255, 159, 0, 0.3);
+  padding: 8px 16px;
+  text-align: center;
+  z-index: 1000;
+  animation: fadeInDown 0.5s ease-out;
+}
+
+.disclaimer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: var(--text-main);
+  gap: 8px;
+}
+
+.warning-icon {
+  color: var(--accent-orange);
+  font-weight: bold;
+}
+
+/* Layout container */
+.app-container {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 38px); /* Account for disclaimer banner */
+  overflow: hidden;
+}
+
+/* 2. Sidebar Navigation */
+.sidebar {
+  width: 280px;
+  background-color: var(--bg-panel);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+}
+
+.sidebar-header h2 {
+  font-family: var(--font-header);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.sidebar-header p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.schemes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scheme-item {
+  padding: 12px 14px;
+  border-radius: var(--border-radius-md);
+  font-size: 0.85rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  background-color: transparent;
+  transition: var(--transition);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.scheme-item:hover {
+  background-color: var(--bg-card);
+  color: var(--primary);
+  border-color: rgba(0, 255, 255, 0.2);
+  transform: translateX(4px);
+}
+
+/* 3. Main Chat Workspace */
+.chat-workspace {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-dark);
+  position: relative;
+}
+
+/* Header Area (Glassmorphic) */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(9, 13, 22, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-badge {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: var(--bg-dark);
+  font-family: var(--font-header);
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+}
+
+.logo-area h1 {
+  font-family: var(--font-header);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.logo-area p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.system-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-green);
+  box-shadow: 0 0 8px var(--accent-green);
+  transition: var(--transition);
+}
+
+.status-dot.loading {
+  background-color: var(--accent-orange);
+  box-shadow: 0 0 8px var(--accent-orange);
+  animation: pulse 1s infinite alternate;
+}
+
+/* Chat display panels */
+.chat-display {
+  flex: 1;
+  padding: 32px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Welcome Card */
+.welcome-card {
+  max-width: 650px;
+  margin: auto;
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  padding: 32px;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  text-align: center;
+  animation: scaleUp 0.4s ease-out;
+}
+
+.welcome-card h2 {
+  font-family: var(--font-header);
+  margin-bottom: 12px;
+  font-size: 1.75rem;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcome-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+.guide-section {
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.guide-section h3, .example-triggers-section h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pills span {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  transition: var(--transition);
+}
+
+.pills span:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.example-triggers-section {
+  text-align: left;
+}
+
+.example-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 600px) {
+  .example-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.example-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  border-radius: var(--border-radius-md);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: var(--transition);
+}
+
+.example-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px var(--primary-glow);
+}
+
+.example-title {
+  font-family: var(--font-header);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--primary);
+}
+
+.example-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Chat bubble styling */
+.chat-bubble {
+  max-width: 75%;
+  padding: 16px;
+  border-radius: var(--border-radius-md);
+  line-height: 1.5;
+  font-size: 0.95rem;
+  animation: slideInUp 0.3s ease-out;
+  position: relative;
+}
+
+.chat-bubble.user {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  align-self: flex-end;
+  border-bottom-right-radius: 2px;
+}
+
+.chat-bubble.bot {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+  border-left: 3px solid var(--primary);
+}
+
+.chat-bubble.bot.refusal {
+  border-left-color: var(--accent-orange);
+}
+
+.bot-citation {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.citation-link {
+  color: var(--primary);
+  text-decoration: none;
+  background-color: rgba(0, 255, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  transition: var(--transition);
+}
+
+.citation-link:hover {
+  background-color: rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 6px var(--primary-glow);
+}
+
+.bot-footer {
+  margin-top: 12px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-color);
+  padding-top: 8px;
+}
+
+/* 4. Live Pipeline Progress Indicator */
+.pipeline-indicator {
+  padding: 12px 32px;
+  background-color: var(--bg-panel);
+  border-top: 1px solid var(--border-color);
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.step-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.steps-progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.step-badge {
+  background-color: var(--bg-card);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  transition: var(--transition);
+}
+
+.step-badge.active {
+  background-color: rgba(0, 255, 255, 0.1);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.step-badge.done {
+  background-color: rgba(57, 255, 20, 0.1);
+  color: var(--accent-green);
+  border-color: var(--accent-green);
+}
+
+.step-arrow {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(0, 255, 255, 0.2);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* 5. Chat Input Console */
+.input-form {
+  display: flex;
+  padding: 20px 32px;
+  background-color: var(--bg-panel);
+  border-top: 1px solid var(--border-color);
+  gap: 12px;
+  align-items: center;
+}
+
+.input-form input {
+  flex: 1;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 14px 20px;
+  border-radius: var(--border-radius-md);
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.input-form input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 10px var(--primary-glow);
+}
+
+.input-form button {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  border: none;
+  width: 46px;
+  height: 46px;
+  border-radius: var(--border-radius-md);
+  color: var(--bg-dark);
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.input-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px var(--primary-glow);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

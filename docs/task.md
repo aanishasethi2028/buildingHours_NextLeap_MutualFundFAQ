@@ -1,0 +1,28 @@
+# Project Task Tracking: Mutual Fund FAQ Assistant
+
+- `[x]` **Phase 1: Project Setup & Environment**
+  - `[x]` Initialize project structure and config files
+  - `[x]` Establish package configuration and dependencies
+- `[x]` **Phase 2: Offline Ingestion & Scheduler**
+  - `[x]` Implement Ingestion Scheduler (cron trigger)
+  - `[x]` Write document fetching/mock logic for 13 schemes
+  - `[x]` Implement structure-aware parser for factsheet tables
+  - `[x]` Implement section header boundary chunker
+  - `[x]` Integrate embedding generation & Vector DB storage
+- `[x]` **Phase 3: Input Guardrails & Intent Classifier**
+  - `[x]` Build PII regex redaction engine
+  - `[x]` Implement fuzzy Levenshtein entity resolution for schemes
+  - `[x]` Implement intent classifier (Factual, Advisory, Performance, Out-of-Domain)
+- `[x]` **Phase 4: Retrieval & LLM Prompt Pipeline**
+  - `[x]` Implement faceted scheme-filtered search
+  - `[x]` Build Reciprocal Rank Fusion (RRF) for hybrid retrieval
+  - `[x]` Set up LLM API integration with system prompt anchoring
+- `[x]` **Phase 5: Output Validation & Compliance**
+  - `[x]` Implement sentence count (<=3) and citation validator
+  - `[x]` Implement fallback handler for compliance failures
+- `[x]` **Phase 6: Frontend Development**
+  - `[x]` Build UI layout (Sticky disclaimer, chat container, modern HSL styles)
+  - `[x]` Connect UI interactions (example query click triggers, status indicators)
+- `[x]` **Phase 7: End-to-End Integration & Testing**
+  - `[x]` Execute integration tests & compliance audits
+  - `[x]` Verify daily scheduler end-to-end execution

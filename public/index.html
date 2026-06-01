@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mutual Fund FAQ Assistant</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="A compliance-first, facts-only Retrieval-Augmented Generation (RAG) assistant providing verified, source-backed answers for mutual fund schemes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Disclaimer Header Banner -->
+  <div class="disclaimer-banner" id="disclaimer-banner">
+    <div class="disclaimer-content">
+      <span class="warning-icon">⚠</span>
+      <strong>Disclaimer:</strong> Facts-only Q&amp;A. Strictly no investment advice, opinions, or recommendations.
+    </div>
+  </div>
+
+  <div class="app-container">
+    
+    <!-- Sidebar: Supported Schemes -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Domain Scope</h2>
+        <p>13 Supported Schemes</p>
+      </div>
+      <div class="schemes-list">
+        <div class="scheme-item" onclick="populateQuery('Axis Small Cap Fund Direct Growth')">Axis Small Cap Fund</div>
+        <div class="scheme-item" onclick="populateQuery('Axis Silver FoF Direct Growth')">Axis Silver FoF</div>
+        <div class="scheme-item" onclick="populateQuery('Axis Liquid Direct Fund Growth')">Axis Liquid Direct Fund</div>
+        <div class="scheme-item" onclick="populateQuery('LIC MF Index Fund Nifty Direct Growth')">LIC MF Index Fund Nifty</div>
+        <div class="scheme-item" onclick="populateQuery('LIC MF Children\'s Fund Direct Growth')">LIC MF Children's Fund</div>
+        <div class="scheme-item" onclick="populateQuery('Baroda BNP Paribas Large & Mid Cap Fund Direct Growth')">Baroda BNP Large & Mid Cap</div>
+        <div class="scheme-item" onclick="populateQuery('Baroda BNP Paribas Multi Asset Fund Direct Growth')">Baroda BNP Multi Asset</div>
+        <div class="scheme-item" onclick="populateQuery('Quantum ESG Best In Class Strategy Fund Direct Growth')">Quantum ESG Strategy</div>
+        <div class="scheme-item" onclick="populateQuery('Quantum Ethical Fund Direct Growth')">Quantum Ethical Fund</div>
+        <div class="scheme-item" onclick="populateQuery('Quantum Dynamic Bond Fund Growth')">Quantum Dynamic Bond</div>
+        <div class="scheme-item" onclick="populateQuery('Zerodha Overnight Fund Direct Growth')">Zerodha Overnight Fund</div>
+        <div class="scheme-item" onclick="populateQuery('Zerodha Nifty 50 Index Fund Direct Growth')">Zerodha Nifty 50 Index</div>
+        <div class="scheme-item" onclick="populateQuery('Aditya Birla Sun Life Gold Fund Direct Growth')">Aditya Birla Gold Fund</div>
+      </div>
+    </aside>
+
+    <!-- Main Chat Workspace -->
+    <main class="chat-workspace">
+      <!-- Header -->
+      <header class="app-header">
+        <div class="logo-area">
+          <div class="logo-badge">RAG</div>
+          <div>
+            <h1>Mutual Fund FAQ</h1>
+            <p>Compliance-First Intelligent retrieval engine</p>
+          </div>
+        </div>
+        <div class="system-status">
+          <span class="status-dot"></span>
+          <span id="status-text">System Ready</span>
+        </div>
+      </header>
+
+      <!-- Welcome / Workspace Body -->
+      <div class="chat-display" id="chat-display">
+        
+        <!-- Welcome Card -->
+        <div class="welcome-card" id="welcome-card">
+          <h2>Welcome to the FAQ Assistant</h2>
+          <p>This assistant resolves factual, objective queries regarding target mutual funds utilizing officially verified factsheets, SIDs, and KIMs. The system enforces strict compliance guardrails.</p>
+          
+          <div class="guide-section">
+            <h3>Supported Queries</h3>
+            <div class="pills">
+              <span>Expense Ratios</span>
+              <span>Exit Loads</span>
+              <span>Minimum Investments</span>
+              <span>Lock-in Periods</span>
+              <span>Benchmark Indices</span>
+              <span>Statements guides</span>
+              <span>Fund Managers</span>
+            </div>
+          </div>
+
+          <div class="example-triggers-section">
+            <h3>Click an example query to get started</h3>
+            <div class="example-grid">
+              <button class="example-card" onclick="runExample('What is the exit load of Axis Small Cap?')">
+                <span class="example-title">Exit Load Structure</span>
+                <span class="example-text">"What is the exit load of Axis Small Cap?"</span>
+              </button>
+              <button class="example-card" onclick="runExample('What is the expense ratio of Zerodha Nifty 50 Index?')">
+                <span class="example-title">Expense Ratios</span>
+                <span class="example-text">"What is the expense ratio of Zerodha Nifty 50 Index?"</span>
+              </button>
+              <button class="example-card" onclick="runExample('How can I download the statement for LIC MF Children\'s Fund?')">
+                <span class="example-title">Statement Downloads</span>
+                <span class="example-text">"How can I download the statement for LIC MF Children's Fund?"</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Live Pipeline Processing Indicators -->
+      <div class="pipeline-indicator" id="pipeline-indicator" style="display: none;">
+        <div class="step-wrapper">
+          <div class="spinner"></div>
+          <div class="steps-progress">
+            <span class="step-badge active" id="step-pii">PII Shield</span>
+            <span class="step-arrow">→</span>
+            <span class="step-badge" id="step-intent">Intent Classifier</span>
+            <span class="step-arrow">→</span>
+            <span class="step-badge" id="step-db">Vector Search</span>
+            <span class="step-arrow">→</span>
+            <span class="step-badge" id="step-llm">LLM API</span>
+            <span class="step-arrow">→</span>
+            <span class="step-badge" id="step-compliance">Compliance Guard</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Input Console -->
+      <form class="input-form" id="input-form" onsubmit="handleQuerySubmit(event)">
+        <input type="text" id="query-input" placeholder="Type a factual mutual fund question (e.g. exit load of Axis Small Cap)..." required autocomplete="off">
+        <button type="submit" id="send-button">
+          <span class="arrow-up">▲</span>
+        </button>
+      </form>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

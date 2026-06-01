@@ -1,0 +1,19 @@
+# Environment variables (contains real API keys – NEVER commit)
+.env
+.env.local
+.env.*.local
+
+# Node modules
+node_modules/
+
+# ChromaDB on-disk index
+data/chroma/
+
+# BGE model cache downloaded by @xenova/transformers
+.cache/
+models/
+
+# OS / editor artifacts
+.DS_Store
+Thumbs.db
+*.log
