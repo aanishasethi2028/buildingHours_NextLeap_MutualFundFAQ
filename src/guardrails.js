@@ -101,7 +101,7 @@ export function resolveSchemeEntity(query) {
       }
     });
 
-    const score = matchCount / Math.max(queryTokens.length, 1);
+    const score = matchCount / Math.max(schemeTokens.length, 1);
     if (score > bestScore) {
       bestScore = score;
       bestScheme = scheme;

@@ -18,26 +18,34 @@
 
   <div class="app-container">
     
-    <!-- Sidebar: Supported Schemes -->
+    <!-- Sidebar: Navigation & History -->
     <aside class="sidebar">
-      <div class="sidebar-header">
-        <h2>Domain Scope</h2>
-        <p>13 Supported Schemes</p>
+      <div class="sidebar-section history-section" style="flex: 1; overflow-y: auto;">
+        <div class="sidebar-header" style="margin-bottom: 16px;">
+          <h2>Chat History</h2>
+          <p>Recent queries</p>
+        </div>
+        <button class="new-chat-btn" onclick="startNewChat()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+          New Chat
+        </button>
+        <div class="history-list" id="history-list">
+          <!-- History items populate here -->
+        </div>
       </div>
-      <div class="schemes-list">
-        <div class="scheme-item" onclick="populateQuery('Axis Small Cap Fund Direct Growth')">Axis Small Cap Fund</div>
-        <div class="scheme-item" onclick="populateQuery('Axis Silver FoF Direct Growth')">Axis Silver FoF</div>
-        <div class="scheme-item" onclick="populateQuery('Axis Liquid Direct Fund Growth')">Axis Liquid Direct Fund</div>
-        <div class="scheme-item" onclick="populateQuery('LIC MF Index Fund Nifty Direct Growth')">LIC MF Index Fund Nifty</div>
-        <div class="scheme-item" onclick="populateQuery('LIC MF Children\'s Fund Direct Growth')">LIC MF Children's Fund</div>
-        <div class="scheme-item" onclick="populateQuery('Baroda BNP Paribas Large & Mid Cap Fund Direct Growth')">Baroda BNP Large & Mid Cap</div>
-        <div class="scheme-item" onclick="populateQuery('Baroda BNP Paribas Multi Asset Fund Direct Growth')">Baroda BNP Multi Asset</div>
-        <div class="scheme-item" onclick="populateQuery('Quantum ESG Best In Class Strategy Fund Direct Growth')">Quantum ESG Strategy</div>
-        <div class="scheme-item" onclick="populateQuery('Quantum Ethical Fund Direct Growth')">Quantum Ethical Fund</div>
-        <div class="scheme-item" onclick="populateQuery('Quantum Dynamic Bond Fund Growth')">Quantum Dynamic Bond</div>
-        <div class="scheme-item" onclick="populateQuery('Zerodha Overnight Fund Direct Growth')">Zerodha Overnight Fund</div>
-        <div class="scheme-item" onclick="populateQuery('Zerodha Nifty 50 Index Fund Direct Growth')">Zerodha Nifty 50 Index</div>
-        <div class="scheme-item" onclick="populateQuery('Aditya Birla Sun Life Gold Fund Direct Growth')">Aditya Birla Gold Fund</div>
+
+      <div class="sidebar-section schemes-section" style="margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border-color);">
+        <div class="sidebar-header" style="margin-bottom: 12px; border-bottom: none; padding-bottom: 0;">
+          <h2>Supported Schemes</h2>
+        </div>
+        <div class="schemes-list">
+          <div class="scheme-item" onclick="populateQuery('Axis Small Cap Fund Direct Growth')">Axis Small Cap Fund</div>
+          <div class="scheme-item" onclick="populateQuery('Axis Silver FoF Direct Growth')">Axis Silver FoF</div>
+          <div class="scheme-item" onclick="populateQuery('Axis Liquid Direct Fund Growth')">Axis Liquid Direct Fund</div>
+        </div>
       </div>
     </aside>
 
@@ -103,13 +111,13 @@
           <div class="guide-section">
             <h3>Supported Queries</h3>
             <div class="pills">
-              <span>Expense Ratios</span>
-              <span>Exit Loads</span>
-              <span>Minimum Investments</span>
-              <span>Lock-in Periods</span>
-              <span>Benchmark Indices</span>
-              <span>Statements guides</span>
-              <span>Fund Managers</span>
+              <span onclick="explainTopic('Expense Ratio')">Expense Ratios</span>
+              <span onclick="explainTopic('Exit Load')">Exit Loads</span>
+              <span onclick="explainTopic('Minimum Investment')">Minimum Investments</span>
+              <span onclick="explainTopic('Lock-in Period')">Lock-in Periods</span>
+              <span onclick="explainTopic('Benchmark Index')">Benchmark Indices</span>
+              <span onclick="explainTopic('Statements Guide')">Statements guides</span>
+              <span onclick="explainTopic('Fund Manager')">Fund Managers</span>
             </div>
           </div>
 

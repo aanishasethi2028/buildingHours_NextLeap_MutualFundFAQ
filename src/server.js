@@ -51,8 +51,8 @@ app.post('/api/chat', async (req, res) => {
     if (intent === 'ADVISORY') {
       return res.json({
         answer: "I am a facts-only mutual fund assistant and cannot provide investment recommendations, advice, or buy/sell suggestions. For official investor education, please refer to the [SEBI Investor Association Guide](https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doSubInvestortab=yes).",
-        citation_url: "https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doSubInvestortab=yes",
-        last_updated: "2026-05-29",
+        citation_url: null,
+        last_updated: null,
         is_refusal: true,
         disclaimer: "Facts-only. No investment advice."
       });
@@ -61,8 +61,8 @@ app.post('/api/chat', async (req, res) => {
     if (intent === 'OUT_OF_DOMAIN') {
       return res.json({
         answer: "I am designed to answer factual, source-backed questions about the 13 supported mutual fund schemes only. For general educational information on mutual funds, please visit the [AMFI India Investor Corner](https://www.amfiindia.com/investor-corner).",
-        citation_url: "https://www.amfiindia.com/investor-corner",
-        last_updated: "2026-05-29",
+        citation_url: null,
+        last_updated: null,
         is_refusal: true,
         disclaimer: "Facts-only. No investment advice."
       });
@@ -87,8 +87,8 @@ app.post('/api/chat', async (req, res) => {
       } else {
         return res.json({
           answer: "I cannot provide return rates, projections, or performance comparisons. For official educational resources, please visit the [AMFI India Investor Corner](https://www.amfiindia.com/investor-corner).",
-          citation_url: "https://www.amfiindia.com/investor-corner",
-          last_updated: "2026-05-29",
+          citation_url: null,
+          last_updated: null,
           is_refusal: true,
           disclaimer: "Facts-only. No investment advice."
         });

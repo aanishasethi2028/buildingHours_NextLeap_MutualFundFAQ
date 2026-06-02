@@ -14,6 +14,28 @@ const steps = [
   { id: 'step-compliance', label: 'Compliance Guard' }
 ];
 
+// Chat History State
+let chatHistory = [];
+let currentSessionHasHistoryEntry = false;
+
+function updateHistoryUI() {
+  const historyList = document.getElementById('history-list');
+  if (!historyList) return;
+  
+  historyList.innerHTML = '';
+  chatHistory.forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'scheme-item'; // Reuse same styles as scheme-item
+    div.textContent = item.header;
+    div.title = item.fullQuery; // Show full query on hover
+    div.onclick = () => {
+      queryInput.value = item.fullQuery;
+      queryInput.focus();
+    };
+    historyList.appendChild(div);
+  });
+}
+
 function setSystemStatus(status, text) {
   statusText.textContent = text;
   if (status === 'loading') {
@@ -54,6 +76,27 @@ if (localStorage.getItem('theme') === 'light') {
 window.runExample = function(queryText) {
   queryInput.value = queryText;
   inputForm.dispatchEvent(new Event('submit'));
+};
+
+// Pill triggers for topic explanation
+window.explainTopic = function(topic) {
+  const explanation = `You can ask me factual questions about **${topic}**. \n\nPlease make sure to include the name of one of our supported schemes in your query so I know which fund you are referring to.\n\n*Example: "What is the ${topic.toLowerCase()} of Axis Small Cap Fund?"*`;
+  appendMessage('bot', explanation, null, 'System Guide');
+};
+
+// Start a new chat session
+window.startNewChat = function() {
+  const bubbles = document.querySelectorAll('.chat-bubble');
+  bubbles.forEach(b => b.remove());
+  
+  const welcomeCard = document.getElementById('welcome-card');
+  if (welcomeCard) {
+    welcomeCard.style.display = 'block';
+  }
+  
+  queryInput.value = '';
+  queryInput.focus();
+  currentSessionHasHistoryEntry = false;
 };
 
 // Append a message bubble to the chat
@@ -110,6 +153,38 @@ function appendMessage(sender, text, citation = null, footer = null, isRefusal =
 
   bubble.innerHTML = renderMarkdown(text);
 
+  // Action bar
+  const actionsDiv = document.createElement('div');
+  actionsDiv.className = 'bubble-actions';
+
+  // Copy button
+  const copyBtn = document.createElement('button');
+  copyBtn.className = 'bubble-action-btn';
+  copyBtn.title = 'Copy text';
+  copyBtn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>`;
+  copyBtn.onclick = () => {
+    navigator.clipboard.writeText(text).then(() => {
+      const origHtml = copyBtn.innerHTML;
+      copyBtn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+      setTimeout(() => copyBtn.innerHTML = origHtml, 2000);
+    });
+  };
+  actionsDiv.appendChild(copyBtn);
+
+  if (sender === 'user') {
+    // Edit button
+    const editBtn = document.createElement('button');
+    editBtn.className = 'bubble-action-btn';
+    editBtn.title = 'Edit query';
+    editBtn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>`;
+    editBtn.onclick = () => {
+      queryInput.value = text;
+      queryInput.focus();
+    };
+    actionsDiv.appendChild(editBtn);
+  }
+
+  
 
   if (sender === 'bot') {
     if (citation) {
@@ -127,7 +202,12 @@ function appendMessage(sender, text, citation = null, footer = null, isRefusal =
     }
   }
 
-  chatDisplay.appendChild(bubble);
+  const wrapper = document.createElement('div');
+  wrapper.className = `message-wrapper ${sender}`;
+  wrapper.appendChild(bubble);
+  wrapper.appendChild(actionsDiv);
+
+  chatDisplay.appendChild(wrapper);
   chatDisplay.scrollTop = chatDisplay.scrollHeight;
 }
 
@@ -191,6 +271,15 @@ window.handleQuerySubmit = async function(event) {
   // Append user message
   appendMessage('user', query);
   queryInput.value = '';
+
+  // Update History (only for the first query in a new session)
+  if (!currentSessionHasHistoryEntry) {
+    const summary = query.length > 28 ? query.substring(0, 28) + '...' : query;
+    chatHistory.unshift({ header: summary, fullQuery: query });
+    if (chatHistory.length > 5) chatHistory.pop();
+    updateHistoryUI();
+    currentSessionHasHistoryEntry = true;
+  }
 
   setSystemStatus('loading', 'Processing Query...');
   

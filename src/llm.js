@@ -71,7 +71,7 @@ Your job is to answer the user query based ONLY on the provided context chunks.
 Strict Rules:
 1. Answer using ONLY the facts explicitly mentioned in the context. If the fact is not in the context, say "I'm sorry, but that information is not available in the official documentation."
 2. Do NOT speculate, extrapolate, or provide opinions or recommendations.
-3. Write the answer to the user query clearly and concisely.
+3. Write the answer to the user query clearly and concisely while giving complete information available in the context.
 4. If the answer involves steps or a list, format each item on a new line as a numbered list (e.g. "1. Step one\n2. Step two\n3. Step three").
 5. Do NOT include any URLs, links, or "for more information" statements. The citation will be shown separately.
 6. Return only the factual answer text. Do not append footers, disclaimer notes, or source references.`;
