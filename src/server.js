@@ -7,7 +7,7 @@ import dotenv from 'dotenv';
 // Load environment variables
 dotenv.config();
 
-import { startScheduler } from './scheduler.js';
+import { runIngestion } from './ingestion.js';
 import { sanitizePII, resolveSchemeEntity, classifyIntent } from './guardrails.js';
 import { processFactualQuery } from './llm.js';
 
@@ -24,8 +24,12 @@ app.use(express.json());
 // Serve static frontend assets
 app.use(express.static(path.join(__dirname, '../public')));
 
-// Initialize Ingestion Scheduler on startup
-const scheduler = startScheduler();
+// Run Ingestion on startup (previously handled by scheduler)
+try {
+  runIngestion();
+} catch (error) {
+  console.error('Error running startup ingestion:', error);
+}
 
 // Main Chat/Query Endpoint
 app.post('/api/chat', async (req, res) => {
@@ -126,7 +130,8 @@ app.post('/api/chat', async (req, res) => {
 // Endpoint to trigger manual data ingestion (primarily for QA/testing)
 app.post('/api/ingest', (req, res) => {
   try {
-    const totalIndexed = scheduler.triggerNow();
+    console.log(`[${new Date().toISOString()}] Manual Ingestion API Activated.`);
+    const totalIndexed = runIngestion();
     res.json({ message: 'Manual ingestion triggered successfully.', totalIndexed });
   } catch (e) {
     console.error('Manual ingestion failed:', e);
