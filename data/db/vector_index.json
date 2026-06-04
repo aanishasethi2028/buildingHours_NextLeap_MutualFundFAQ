@@ -2,13 +2,13 @@
   "documents": [
     {
       "id": "axis-silver-fof-direct-growth-chunk-0",
-      "text": "Scheme: Axis Silver FoF Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Axis Silver FoF Direct Growth is 0.15% as of May 1, 2026. The total Asset Under Management (AUM) is Rs. 120 Crores as of May 2026.",
+      "text": "Scheme: Axis Silver FoF Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Axis Silver FoF Direct Growth is 0.08% as of June 4, 2026. The total Asset Under Management (AUM) is Rs. 3,66,022.79 Crores as of June 2026.",
       "metadata": {
         "chunk_id": "axis-silver-fof-direct-growth-chunk-0",
         "scheme_name": "Axis Silver FoF Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-silver-fof-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Expense Ratio & Asset Under Management"
       },
       "tokens": [
@@ -35,11 +35,11 @@
         "direct",
         "growth",
         "is",
-        "015",
+        "008",
         "as",
         "of",
-        "may",
-        "1",
+        "june",
+        "4",
         "2026",
         "the",
         "total",
@@ -49,17 +49,17 @@
         "aum",
         "is",
         "rs",
-        "120",
+        "36602279",
         "crores",
         "as",
         "of",
-        "may",
+        "june",
         "2026"
       ],
       "tf": {
-        "1": 0.03125,
-        "120": 0.03125,
+        "4": 0.03125,
         "2026": 0.0625,
+        "36602279": 0.03125,
         "scheme": 0.03125,
         "axis": 0.0625,
         "silver": 0.0625,
@@ -72,8 +72,8 @@
         "asset": 0.0625,
         "management": 0.0625,
         "content": 0.03125,
-        "015": 0.03125,
-        "may": 0.0625,
+        "008": 0.03125,
+        "june": 0.0625,
         "total": 0.03125,
         "aum": 0.03125,
         "rs": 0.03125,
@@ -88,7 +88,7 @@
         "scheme_name": "Axis Silver FoF Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-silver-fof-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Exit Load Structure"
       },
       "tokens": [
@@ -152,7 +152,7 @@
         "scheme_name": "Axis Silver FoF Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-silver-fof-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Minimum Investment Details"
       },
       "tokens": [
@@ -213,7 +213,7 @@
         "scheme_name": "Axis Silver FoF Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-silver-fof-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Fund Management Details"
       },
       "tokens": [
@@ -296,7 +296,7 @@
         "scheme_name": "Axis Silver FoF Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-silver-fof-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Riskometer & Benchmark Index"
       },
       "tokens": [
@@ -362,7 +362,7 @@
         "scheme_name": "Axis Silver FoF Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-silver-fof-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "ELSS Lock-in & Lock-in Periods"
       },
       "tokens": [
@@ -431,7 +431,7 @@
         "scheme_name": "Axis Silver FoF Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-silver-fof-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Statement Download Procedure Guide"
       },
       "tokens": [
@@ -523,13 +523,13 @@
     },
     {
       "id": "axis-small-cap-fund-direct-growth-chunk-0",
-      "text": "Scheme: Axis Small Cap Fund Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Axis Small Cap Fund Direct Growth is 0.55% as of May 1, 2026. The total Asset Under Management (AUM) is Rs. 20,500 Crores as of May 2026.",
+      "text": "Scheme: Axis Small Cap Fund Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Axis Small Cap Fund Direct Growth is 0.79% as of June 4, 2026. The total Asset Under Management (AUM) is Rs. 3,66,022.79 Crores as of June 2026.",
       "metadata": {
         "chunk_id": "axis-small-cap-fund-direct-growth-chunk-0",
         "scheme_name": "Axis Small Cap Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-small-cap-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Expense Ratio & Asset Under Management"
       },
       "tokens": [
@@ -558,11 +558,11 @@
         "direct",
         "growth",
         "is",
-        "055",
+        "079",
         "as",
         "of",
-        "may",
-        "1",
+        "june",
+        "4",
         "2026",
         "the",
         "total",
@@ -572,17 +572,17 @@
         "aum",
         "is",
         "rs",
-        "20500",
+        "36602279",
         "crores",
         "as",
         "of",
-        "may",
+        "june",
         "2026"
       ],
       "tf": {
-        "1": 0.029411764705882353,
+        "4": 0.029411764705882353,
         "2026": 0.058823529411764705,
-        "20500": 0.029411764705882353,
+        "36602279": 0.029411764705882353,
         "scheme": 0.029411764705882353,
         "axis": 0.058823529411764705,
         "small": 0.058823529411764705,
@@ -596,8 +596,8 @@
         "asset": 0.058823529411764705,
         "management": 0.058823529411764705,
         "content": 0.029411764705882353,
-        "055": 0.029411764705882353,
-        "may": 0.058823529411764705,
+        "079": 0.029411764705882353,
+        "june": 0.058823529411764705,
         "total": 0.029411764705882353,
         "aum": 0.029411764705882353,
         "rs": 0.029411764705882353,
@@ -612,7 +612,7 @@
         "scheme_name": "Axis Small Cap Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-small-cap-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Exit Load Structure"
       },
       "tokens": [
@@ -685,7 +685,7 @@
         "scheme_name": "Axis Small Cap Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-small-cap-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Minimum Investment Details"
       },
       "tokens": [
@@ -748,7 +748,7 @@
         "scheme_name": "Axis Small Cap Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-small-cap-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Fund Management Details"
       },
       "tokens": [
@@ -828,7 +828,7 @@
         "scheme_name": "Axis Small Cap Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-small-cap-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Riskometer & Benchmark Index"
       },
       "tokens": [
@@ -897,7 +897,7 @@
         "scheme_name": "Axis Small Cap Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-small-cap-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "ELSS Lock-in & Lock-in Periods"
       },
       "tokens": [
@@ -967,7 +967,7 @@
         "scheme_name": "Axis Small Cap Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-small-cap-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Statement Download Procedure Guide"
       },
       "tokens": [
@@ -1060,13 +1060,13 @@
     },
     {
       "id": "axis-liquid-direct-fund-growth-chunk-0",
-      "text": "Scheme: Axis Liquid Direct Fund Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Axis Liquid Direct Fund Growth is 0.25% as of May 1, 2026. The total Asset Under Management (AUM) is Rs. 25,000 Crores as of May 2026.",
+      "text": "Scheme: Axis Liquid Direct Fund Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Axis Liquid Direct Fund Growth is 0.12% as of June 4, 2026. The total Asset Under Management (AUM) is Rs. 3,66,022.79 Crores as of June 2026.",
       "metadata": {
         "chunk_id": "axis-liquid-direct-fund-growth-chunk-0",
         "scheme_name": "Axis Liquid Direct Fund Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-liquid-direct-fund-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Expense Ratio & Asset Under Management"
       },
       "tokens": [
@@ -1093,11 +1093,11 @@
         "fund",
         "growth",
         "is",
-        "025",
+        "012",
         "as",
         "of",
-        "may",
-        "1",
+        "june",
+        "4",
         "2026",
         "the",
         "total",
@@ -1107,17 +1107,17 @@
         "aum",
         "is",
         "rs",
-        "25000",
+        "36602279",
         "crores",
         "as",
         "of",
-        "may",
+        "june",
         "2026"
       ],
       "tf": {
-        "1": 0.03125,
+        "4": 0.03125,
         "2026": 0.0625,
-        "25000": 0.03125,
+        "36602279": 0.03125,
         "scheme": 0.03125,
         "axis": 0.0625,
         "liquid": 0.0625,
@@ -1130,8 +1130,8 @@
         "asset": 0.0625,
         "management": 0.0625,
         "content": 0.03125,
-        "025": 0.03125,
-        "may": 0.0625,
+        "012": 0.03125,
+        "june": 0.0625,
         "total": 0.03125,
         "aum": 0.03125,
         "rs": 0.03125,
@@ -1146,7 +1146,7 @@
         "scheme_name": "Axis Liquid Direct Fund Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-liquid-direct-fund-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Exit Load Structure"
       },
       "tokens": [
@@ -1245,7 +1245,7 @@
         "scheme_name": "Axis Liquid Direct Fund Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-liquid-direct-fund-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Minimum Investment Details"
       },
       "tokens": [
@@ -1306,7 +1306,7 @@
         "scheme_name": "Axis Liquid Direct Fund Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-liquid-direct-fund-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Fund Management Details"
       },
       "tokens": [
@@ -1388,7 +1388,7 @@
         "scheme_name": "Axis Liquid Direct Fund Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-liquid-direct-fund-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Riskometer & Benchmark Index"
       },
       "tokens": [
@@ -1452,7 +1452,7 @@
         "scheme_name": "Axis Liquid Direct Fund Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-liquid-direct-fund-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "ELSS Lock-in & Lock-in Periods"
       },
       "tokens": [
@@ -1513,7 +1513,7 @@
         "scheme_name": "Axis Liquid Direct Fund Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/axis-liquid-direct-fund-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Statement Download Procedure Guide"
       },
       "tokens": [
@@ -1604,13 +1604,13 @@
     },
     {
       "id": "lic-mf-index-fund-nifty-direct-growth-chunk-0",
-      "text": "Scheme: LIC MF Index Fund Nifty Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of LIC MF Index Fund Nifty Direct Growth is 0.20% as of May 1, 2026. The total Asset Under Management (AUM) is Rs. 105 Crores as of May 2026.",
+      "text": "Scheme: LIC MF Index Fund Nifty Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of LIC MF Index Fund Nifty Direct Growth is 0.55% as of June 4, 2026. The total Asset Under Management (AUM) is Rs. 48,379.12 Crores as of June 2026.",
       "metadata": {
         "chunk_id": "lic-mf-index-fund-nifty-direct-growth-chunk-0",
         "scheme_name": "LIC MF Index Fund Nifty Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/lic-mf-index-fund-nifty-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Expense Ratio & Asset Under Management"
       },
       "tokens": [
@@ -1641,11 +1641,11 @@
         "direct",
         "growth",
         "is",
-        "020",
+        "055",
         "as",
         "of",
-        "may",
-        "1",
+        "june",
+        "4",
         "2026",
         "the",
         "total",
@@ -1655,17 +1655,17 @@
         "aum",
         "is",
         "rs",
-        "105",
+        "4837912",
         "crores",
         "as",
         "of",
-        "may",
+        "june",
         "2026"
       ],
       "tf": {
-        "1": 0.027777777777777776,
-        "105": 0.027777777777777776,
+        "4": 0.027777777777777776,
         "2026": 0.05555555555555555,
+        "4837912": 0.027777777777777776,
         "scheme": 0.027777777777777776,
         "lic": 0.05555555555555555,
         "mf": 0.05555555555555555,
@@ -1680,8 +1680,8 @@
         "asset": 0.05555555555555555,
         "management": 0.05555555555555555,
         "content": 0.027777777777777776,
-        "020": 0.027777777777777776,
-        "may": 0.05555555555555555,
+        "055": 0.027777777777777776,
+        "june": 0.05555555555555555,
         "total": 0.027777777777777776,
         "aum": 0.027777777777777776,
         "rs": 0.027777777777777776,
@@ -1696,7 +1696,7 @@
         "scheme_name": "LIC MF Index Fund Nifty Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/lic-mf-index-fund-nifty-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Exit Load Structure"
       },
       "tokens": [
@@ -1768,7 +1768,7 @@
         "scheme_name": "LIC MF Index Fund Nifty Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/lic-mf-index-fund-nifty-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Minimum Investment Details"
       },
       "tokens": [
@@ -1833,7 +1833,7 @@
         "scheme_name": "LIC MF Index Fund Nifty Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/lic-mf-index-fund-nifty-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Fund Management Details"
       },
       "tokens": [
@@ -1915,7 +1915,7 @@
         "scheme_name": "LIC MF Index Fund Nifty Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/lic-mf-index-fund-nifty-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Riskometer & Benchmark Index"
       },
       "tokens": [
@@ -1982,7 +1982,7 @@
         "scheme_name": "LIC MF Index Fund Nifty Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/lic-mf-index-fund-nifty-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "ELSS Lock-in & Lock-in Periods"
       },
       "tokens": [
@@ -2047,7 +2047,7 @@
         "scheme_name": "LIC MF Index Fund Nifty Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/lic-mf-index-fund-nifty-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Statement Download Procedure Guide"
       },
       "tokens": [
@@ -2143,13 +2143,13 @@
     },
     {
       "id": "lic-mf-children-s-fund-direct-growth-chunk-0",
-      "text": "Scheme: LIC MF Children's Fund Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of LIC MF Children's Fund Direct Growth is 1.25% as of May 1, 2026. The total Asset Under Management (AUM) is Rs. 15 Crores as of May 2026.",
+      "text": "Scheme: LIC MF Children's Fund Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of LIC MF Children's Fund Direct Growth is 1.51% as of June 4, 2026. The total Asset Under Management (AUM) is Rs. 48,379.12 Crores as of June 2026.",
       "metadata": {
         "chunk_id": "lic-mf-children-s-fund-direct-growth-chunk-0",
         "scheme_name": "LIC MF Children's Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/lic-mf-children's-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Expense Ratio & Asset Under Management"
       },
       "tokens": [
@@ -2178,11 +2178,11 @@
         "direct",
         "growth",
         "is",
-        "125",
+        "151",
         "as",
         "of",
-        "may",
-        "1",
+        "june",
+        "4",
         "2026",
         "the",
         "total",
@@ -2192,18 +2192,18 @@
         "aum",
         "is",
         "rs",
-        "15",
+        "4837912",
         "crores",
         "as",
         "of",
-        "may",
+        "june",
         "2026"
       ],
       "tf": {
-        "1": 0.029411764705882353,
-        "15": 0.029411764705882353,
-        "125": 0.029411764705882353,
+        "4": 0.029411764705882353,
+        "151": 0.029411764705882353,
         "2026": 0.058823529411764705,
+        "4837912": 0.029411764705882353,
         "scheme": 0.029411764705882353,
         "lic": 0.058823529411764705,
         "mf": 0.058823529411764705,
@@ -2217,7 +2217,7 @@
         "asset": 0.058823529411764705,
         "management": 0.058823529411764705,
         "content": 0.029411764705882353,
-        "may": 0.058823529411764705,
+        "june": 0.058823529411764705,
         "total": 0.029411764705882353,
         "aum": 0.029411764705882353,
         "rs": 0.029411764705882353,
@@ -2232,7 +2232,7 @@
         "scheme_name": "LIC MF Children's Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/lic-mf-children's-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Exit Load Structure"
       },
       "tokens": [
@@ -2311,7 +2311,7 @@
         "scheme_name": "LIC MF Children's Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/lic-mf-children's-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Minimum Investment Details"
       },
       "tokens": [
@@ -2374,7 +2374,7 @@
         "scheme_name": "LIC MF Children's Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/lic-mf-children's-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Fund Management Details"
       },
       "tokens": [
@@ -2454,7 +2454,7 @@
         "scheme_name": "LIC MF Children's Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/lic-mf-children's-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Riskometer & Benchmark Index"
       },
       "tokens": [
@@ -2521,7 +2521,7 @@
         "scheme_name": "LIC MF Children's Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/lic-mf-children's-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "ELSS Lock-in & Lock-in Periods"
       },
       "tokens": [
@@ -2598,7 +2598,7 @@
         "scheme_name": "LIC MF Children's Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/lic-mf-children's-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Statement Download Procedure Guide"
       },
       "tokens": [
@@ -2692,13 +2692,13 @@
     },
     {
       "id": "baroda-bnp-paribas-large---mid-cap-fund-direct-growth-chunk-0",
-      "text": "Scheme: Baroda BNP Paribas Large & Mid Cap Fund Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Baroda BNP Paribas Large & Mid Cap Fund Direct Growth is 0.75% as of May 1, 2026. The total Asset Under Management (AUM) is Rs. 2,300 Crores as of May 2026.",
+      "text": "Scheme: Baroda BNP Paribas Large & Mid Cap Fund Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Baroda BNP Paribas Large & Mid Cap Fund Direct Growth is 1.00% as of June 4, 2026. The total Asset Under Management (AUM) is Rs. 13,074.50 Crores as of June 2026.",
       "metadata": {
         "chunk_id": "baroda-bnp-paribas-large---mid-cap-fund-direct-growth-chunk-0",
         "scheme_name": "Baroda BNP Paribas Large & Mid Cap Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/baroda-bnp-paribas-large-mid-cap-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Expense Ratio & Asset Under Management"
       },
       "tokens": [
@@ -2733,11 +2733,11 @@
         "direct",
         "growth",
         "is",
-        "075",
+        "100",
         "as",
         "of",
-        "may",
-        "1",
+        "june",
+        "4",
         "2026",
         "the",
         "total",
@@ -2747,17 +2747,18 @@
         "aum",
         "is",
         "rs",
-        "2300",
+        "1307450",
         "crores",
         "as",
         "of",
-        "may",
+        "june",
         "2026"
       ],
       "tf": {
-        "1": 0.025,
+        "4": 0.025,
+        "100": 0.025,
         "2026": 0.05,
-        "2300": 0.025,
+        "1307450": 0.025,
         "scheme": 0.025,
         "baroda": 0.05,
         "bnp": 0.05,
@@ -2774,8 +2775,7 @@
         "asset": 0.05,
         "management": 0.05,
         "content": 0.025,
-        "075": 0.025,
-        "may": 0.05,
+        "june": 0.05,
         "total": 0.025,
         "aum": 0.025,
         "rs": 0.025,
@@ -2790,7 +2790,7 @@
         "scheme_name": "Baroda BNP Paribas Large & Mid Cap Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/baroda-bnp-paribas-large-mid-cap-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Exit Load Structure"
       },
       "tokens": [
@@ -2866,7 +2866,7 @@
         "scheme_name": "Baroda BNP Paribas Large & Mid Cap Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/baroda-bnp-paribas-large-mid-cap-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Minimum Investment Details"
       },
       "tokens": [
@@ -2935,7 +2935,7 @@
         "scheme_name": "Baroda BNP Paribas Large & Mid Cap Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/baroda-bnp-paribas-large-mid-cap-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Fund Management Details"
       },
       "tokens": [
@@ -3022,7 +3022,7 @@
         "scheme_name": "Baroda BNP Paribas Large & Mid Cap Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/baroda-bnp-paribas-large-mid-cap-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Riskometer & Benchmark Index"
       },
       "tokens": [
@@ -3098,7 +3098,7 @@
         "scheme_name": "Baroda BNP Paribas Large & Mid Cap Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/baroda-bnp-paribas-large-mid-cap-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "ELSS Lock-in & Lock-in Periods"
       },
       "tokens": [
@@ -3167,7 +3167,7 @@
         "scheme_name": "Baroda BNP Paribas Large & Mid Cap Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/baroda-bnp-paribas-large-mid-cap-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Statement Download Procedure Guide"
       },
       "tokens": [
@@ -3265,13 +3265,13 @@
     },
     {
       "id": "baroda-bnp-paribas-multi-asset-fund-direct-growth-chunk-0",
-      "text": "Scheme: Baroda BNP Paribas Multi Asset Fund Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Baroda BNP Paribas Multi Asset Fund Direct Growth is 0.65% as of May 1, 2026. The total Asset Under Management (AUM) is Rs. 1,200 Crores as of May 2026.",
+      "text": "Scheme: Baroda BNP Paribas Multi Asset Fund Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Baroda BNP Paribas Multi Asset Fund Direct Growth is 0.89% as of June 4, 2026. The total Asset Under Management (AUM) is Rs. 51,752.63 Crores as of June 2026.",
       "metadata": {
         "chunk_id": "baroda-bnp-paribas-multi-asset-fund-direct-growth-chunk-0",
         "scheme_name": "Baroda BNP Paribas Multi Asset Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/baroda-bnp-paribas-multi-asset-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Expense Ratio & Asset Under Management"
       },
       "tokens": [
@@ -3304,11 +3304,11 @@
         "direct",
         "growth",
         "is",
-        "065",
+        "089",
         "as",
         "of",
-        "may",
-        "1",
+        "june",
+        "4",
         "2026",
         "the",
         "total",
@@ -3318,17 +3318,17 @@
         "aum",
         "is",
         "rs",
-        "1200",
+        "5175263",
         "crores",
         "as",
         "of",
-        "may",
+        "june",
         "2026"
       ],
       "tf": {
-        "1": 0.02631578947368421,
-        "1200": 0.02631578947368421,
+        "4": 0.02631578947368421,
         "2026": 0.05263157894736842,
+        "5175263": 0.02631578947368421,
         "scheme": 0.02631578947368421,
         "baroda": 0.05263157894736842,
         "bnp": 0.05263157894736842,
@@ -3343,8 +3343,8 @@
         "ratio": 0.05263157894736842,
         "management": 0.05263157894736842,
         "content": 0.02631578947368421,
-        "065": 0.02631578947368421,
-        "may": 0.05263157894736842,
+        "089": 0.02631578947368421,
+        "june": 0.05263157894736842,
         "total": 0.02631578947368421,
         "aum": 0.02631578947368421,
         "rs": 0.02631578947368421,
@@ -3359,7 +3359,7 @@
         "scheme_name": "Baroda BNP Paribas Multi Asset Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/baroda-bnp-paribas-multi-asset-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Exit Load Structure"
       },
       "tokens": [
@@ -3433,7 +3433,7 @@
         "scheme_name": "Baroda BNP Paribas Multi Asset Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/baroda-bnp-paribas-multi-asset-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Minimum Investment Details"
       },
       "tokens": [
@@ -3500,7 +3500,7 @@
         "scheme_name": "Baroda BNP Paribas Multi Asset Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/baroda-bnp-paribas-multi-asset-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Fund Management Details"
       },
       "tokens": [
@@ -3586,7 +3586,7 @@
         "scheme_name": "Baroda BNP Paribas Multi Asset Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/baroda-bnp-paribas-multi-asset-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Riskometer & Benchmark Index"
       },
       "tokens": [
@@ -3676,7 +3676,7 @@
         "scheme_name": "Baroda BNP Paribas Multi Asset Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/baroda-bnp-paribas-multi-asset-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "ELSS Lock-in & Lock-in Periods"
       },
       "tokens": [
@@ -3743,7 +3743,7 @@
         "scheme_name": "Baroda BNP Paribas Multi Asset Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/baroda-bnp-paribas-multi-asset-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Statement Download Procedure Guide"
       },
       "tokens": [
@@ -3839,13 +3839,13 @@
     },
     {
       "id": "quantum-esg-best-in-class-strategy-fund-direct-growth-chunk-0",
-      "text": "Scheme: Quantum ESG Best In Class Strategy Fund Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Quantum ESG Best In Class Strategy Fund Direct Growth is 0.85% as of May 1, 2026. The total Asset Under Management (AUM) is Rs. 75 Crores as of May 2026.",
+      "text": "Scheme: Quantum ESG Best In Class Strategy Fund Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Quantum ESG Best In Class Strategy Fund Direct Growth is 0.74% as of June 4, 2026. The total Asset Under Management (AUM) is Rs. 3,298.38 Crores as of June 2026.",
       "metadata": {
         "chunk_id": "quantum-esg-best-in-class-strategy-fund-direct-growth-chunk-0",
         "scheme_name": "Quantum ESG Best In Class Strategy Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-esg-best-in-class-strategy-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Expense Ratio & Asset Under Management"
       },
       "tokens": [
@@ -3880,11 +3880,11 @@
         "direct",
         "growth",
         "is",
-        "085",
+        "074",
         "as",
         "of",
-        "may",
-        "1",
+        "june",
+        "4",
         "2026",
         "the",
         "total",
@@ -3894,17 +3894,17 @@
         "aum",
         "is",
         "rs",
-        "75",
+        "329838",
         "crores",
         "as",
         "of",
-        "may",
+        "june",
         "2026"
       ],
       "tf": {
-        "1": 0.02631578947368421,
-        "75": 0.02631578947368421,
+        "4": 0.02631578947368421,
         "2026": 0.05263157894736842,
+        "329838": 0.02631578947368421,
         "scheme": 0.02631578947368421,
         "quantum": 0.05263157894736842,
         "esg": 0.05263157894736842,
@@ -3920,8 +3920,8 @@
         "asset": 0.05263157894736842,
         "management": 0.05263157894736842,
         "content": 0.02631578947368421,
-        "085": 0.02631578947368421,
-        "may": 0.05263157894736842,
+        "074": 0.02631578947368421,
+        "june": 0.05263157894736842,
         "total": 0.02631578947368421,
         "aum": 0.02631578947368421,
         "rs": 0.02631578947368421,
@@ -3936,7 +3936,7 @@
         "scheme_name": "Quantum ESG Best In Class Strategy Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-esg-best-in-class-strategy-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Exit Load Structure"
       },
       "tokens": [
@@ -4011,7 +4011,7 @@
         "scheme_name": "Quantum ESG Best In Class Strategy Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-esg-best-in-class-strategy-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Minimum Investment Details"
       },
       "tokens": [
@@ -4078,7 +4078,7 @@
         "scheme_name": "Quantum ESG Best In Class Strategy Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-esg-best-in-class-strategy-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Fund Management Details"
       },
       "tokens": [
@@ -4163,7 +4163,7 @@
         "scheme_name": "Quantum ESG Best In Class Strategy Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-esg-best-in-class-strategy-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Riskometer & Benchmark Index"
       },
       "tokens": [
@@ -4236,7 +4236,7 @@
         "scheme_name": "Quantum ESG Best In Class Strategy Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-esg-best-in-class-strategy-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "ELSS Lock-in & Lock-in Periods"
       },
       "tokens": [
@@ -4304,7 +4304,7 @@
         "scheme_name": "Quantum ESG Best In Class Strategy Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-esg-best-in-class-strategy-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Statement Download Procedure Guide"
       },
       "tokens": [
@@ -4399,13 +4399,13 @@
     },
     {
       "id": "quantum-ethical-fund-direct-growth-chunk-0",
-      "text": "Scheme: Quantum Ethical Fund Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Quantum Ethical Fund Direct Growth is 0.95% as of May 1, 2026. The total Asset Under Management (AUM) is Rs. 110 Crores as of May 2026.",
+      "text": "Scheme: Quantum Ethical Fund Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Quantum Ethical Fund Direct Growth is 0.75% as of June 4, 2026. The total Asset Under Management (AUM) is Rs. 3,298.38 Crores as of June 2026.",
       "metadata": {
         "chunk_id": "quantum-ethical-fund-direct-growth-chunk-0",
         "scheme_name": "Quantum Ethical Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-ethical-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Expense Ratio & Asset Under Management"
       },
       "tokens": [
@@ -4432,11 +4432,11 @@
         "direct",
         "growth",
         "is",
-        "095",
+        "075",
         "as",
         "of",
-        "may",
-        "1",
+        "june",
+        "4",
         "2026",
         "the",
         "total",
@@ -4446,17 +4446,17 @@
         "aum",
         "is",
         "rs",
-        "110",
+        "329838",
         "crores",
         "as",
         "of",
-        "may",
+        "june",
         "2026"
       ],
       "tf": {
-        "1": 0.03125,
-        "110": 0.03125,
+        "4": 0.03125,
         "2026": 0.0625,
+        "329838": 0.03125,
         "scheme": 0.03125,
         "quantum": 0.0625,
         "ethical": 0.0625,
@@ -4469,8 +4469,8 @@
         "asset": 0.0625,
         "management": 0.0625,
         "content": 0.03125,
-        "095": 0.03125,
-        "may": 0.0625,
+        "075": 0.03125,
+        "june": 0.0625,
         "total": 0.03125,
         "aum": 0.03125,
         "rs": 0.03125,
@@ -4485,7 +4485,7 @@
         "scheme_name": "Quantum Ethical Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-ethical-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Exit Load Structure"
       },
       "tokens": [
@@ -4553,7 +4553,7 @@
         "scheme_name": "Quantum Ethical Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-ethical-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Minimum Investment Details"
       },
       "tokens": [
@@ -4613,7 +4613,7 @@
         "scheme_name": "Quantum Ethical Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-ethical-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Fund Management Details"
       },
       "tokens": [
@@ -4691,7 +4691,7 @@
         "scheme_name": "Quantum Ethical Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-ethical-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Riskometer & Benchmark Index"
       },
       "tokens": [
@@ -4758,7 +4758,7 @@
         "scheme_name": "Quantum Ethical Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-ethical-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "ELSS Lock-in & Lock-in Periods"
       },
       "tokens": [
@@ -4819,7 +4819,7 @@
         "scheme_name": "Quantum Ethical Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-ethical-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Statement Download Procedure Guide"
       },
       "tokens": [
@@ -4907,13 +4907,13 @@
     },
     {
       "id": "quantum-dynamic-bond-fund-growth-chunk-0",
-      "text": "Scheme: Quantum Dynamic Bond Fund Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Quantum Dynamic Bond Fund Growth is 0.55% as of May 1, 2026. The total Asset Under Management (AUM) is Rs. 85 Crores as of May 2026.",
+      "text": "Scheme: Quantum Dynamic Bond Fund Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Quantum Dynamic Bond Fund Growth is 0.48% as of June 4, 2026. The total Asset Under Management (AUM) is Rs. 3,298.38 Crores as of June 2026.",
       "metadata": {
         "chunk_id": "quantum-dynamic-bond-fund-growth-chunk-0",
         "scheme_name": "Quantum Dynamic Bond Fund Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-dynamic-bond-fund-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Expense Ratio & Asset Under Management"
       },
       "tokens": [
@@ -4940,11 +4940,11 @@
         "fund",
         "growth",
         "is",
-        "055",
+        "048",
         "as",
         "of",
-        "may",
-        "1",
+        "june",
+        "4",
         "2026",
         "the",
         "total",
@@ -4954,17 +4954,17 @@
         "aum",
         "is",
         "rs",
-        "85",
+        "329838",
         "crores",
         "as",
         "of",
-        "may",
+        "june",
         "2026"
       ],
       "tf": {
-        "1": 0.03125,
-        "85": 0.03125,
+        "4": 0.03125,
         "2026": 0.0625,
+        "329838": 0.03125,
         "scheme": 0.03125,
         "quantum": 0.0625,
         "dynamic": 0.0625,
@@ -4977,8 +4977,8 @@
         "asset": 0.0625,
         "management": 0.0625,
         "content": 0.03125,
-        "055": 0.03125,
-        "may": 0.0625,
+        "048": 0.03125,
+        "june": 0.0625,
         "total": 0.03125,
         "aum": 0.03125,
         "rs": 0.03125,
@@ -4993,7 +4993,7 @@
         "scheme_name": "Quantum Dynamic Bond Fund Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-dynamic-bond-fund-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Exit Load Structure"
       },
       "tokens": [
@@ -5056,7 +5056,7 @@
         "scheme_name": "Quantum Dynamic Bond Fund Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-dynamic-bond-fund-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Minimum Investment Details"
       },
       "tokens": [
@@ -5116,7 +5116,7 @@
         "scheme_name": "Quantum Dynamic Bond Fund Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-dynamic-bond-fund-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Fund Management Details"
       },
       "tokens": [
@@ -5198,7 +5198,7 @@
         "scheme_name": "Quantum Dynamic Bond Fund Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-dynamic-bond-fund-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Riskometer & Benchmark Index"
       },
       "tokens": [
@@ -5264,7 +5264,7 @@
         "scheme_name": "Quantum Dynamic Bond Fund Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-dynamic-bond-fund-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "ELSS Lock-in & Lock-in Periods"
       },
       "tokens": [
@@ -5325,7 +5325,7 @@
         "scheme_name": "Quantum Dynamic Bond Fund Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/quantum-dynamic-bond-fund-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Statement Download Procedure Guide"
       },
       "tokens": [
@@ -5413,13 +5413,13 @@
     },
     {
       "id": "zerodha-overnight-fund-direct-growth-chunk-0",
-      "text": "Scheme: Zerodha Overnight Fund Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Zerodha Overnight Fund Direct Growth is 0.10% as of May 1, 2026. The total Asset Under Management (AUM) is Rs. 210 Crores as of May 2026.",
+      "text": "Scheme: Zerodha Overnight Fund Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Zerodha Overnight Fund Direct Growth is 0.15% as of June 4, 2026. The total Asset Under Management (AUM) is Rs. 15,315.91 Crores as of June 2026.",
       "metadata": {
         "chunk_id": "zerodha-overnight-fund-direct-growth-chunk-0",
         "scheme_name": "Zerodha Overnight Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/zerodha-overnight-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Expense Ratio & Asset Under Management"
       },
       "tokens": [
@@ -5446,11 +5446,11 @@
         "direct",
         "growth",
         "is",
-        "010",
+        "015",
         "as",
         "of",
-        "may",
-        "1",
+        "june",
+        "4",
         "2026",
         "the",
         "total",
@@ -5460,17 +5460,17 @@
         "aum",
         "is",
         "rs",
-        "210",
+        "1531591",
         "crores",
         "as",
         "of",
-        "may",
+        "june",
         "2026"
       ],
       "tf": {
-        "1": 0.03125,
-        "210": 0.03125,
+        "4": 0.03125,
         "2026": 0.0625,
+        "1531591": 0.03125,
         "scheme": 0.03125,
         "zerodha": 0.0625,
         "overnight": 0.0625,
@@ -5483,8 +5483,8 @@
         "asset": 0.0625,
         "management": 0.0625,
         "content": 0.03125,
-        "010": 0.03125,
-        "may": 0.0625,
+        "015": 0.03125,
+        "june": 0.0625,
         "total": 0.03125,
         "aum": 0.03125,
         "rs": 0.03125,
@@ -5499,7 +5499,7 @@
         "scheme_name": "Zerodha Overnight Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/zerodha-overnight-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Exit Load Structure"
       },
       "tokens": [
@@ -5551,7 +5551,7 @@
         "scheme_name": "Zerodha Overnight Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/zerodha-overnight-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Minimum Investment Details"
       },
       "tokens": [
@@ -5612,7 +5612,7 @@
         "scheme_name": "Zerodha Overnight Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/zerodha-overnight-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Fund Management Details"
       },
       "tokens": [
@@ -5692,7 +5692,7 @@
         "scheme_name": "Zerodha Overnight Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/zerodha-overnight-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Riskometer & Benchmark Index"
       },
       "tokens": [
@@ -5757,7 +5757,7 @@
         "scheme_name": "Zerodha Overnight Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/zerodha-overnight-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "ELSS Lock-in & Lock-in Periods"
       },
       "tokens": [
@@ -5818,7 +5818,7 @@
         "scheme_name": "Zerodha Overnight Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/zerodha-overnight-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Statement Download Procedure Guide"
       },
       "tokens": [
@@ -5894,13 +5894,13 @@
     },
     {
       "id": "zerodha-nifty-50-index-fund-direct-growth-chunk-0",
-      "text": "Scheme: Zerodha Nifty 50 Index Fund Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Zerodha Nifty 50 Index Fund Direct Growth is 0.20% as of May 1, 2026. The total Asset Under Management (AUM) is Rs. 180 Crores as of May 2026.",
+      "text": "Scheme: Zerodha Nifty 50 Index Fund Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Zerodha Nifty 50 Index Fund Direct Growth is 0.50% as of June 4, 2026. The total Asset Under Management (AUM) is Rs. 15,315.91 Crores as of June 2026.",
       "metadata": {
         "chunk_id": "zerodha-nifty-50-index-fund-direct-growth-chunk-0",
         "scheme_name": "Zerodha Nifty 50 Index Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/zerodha-nifty-50-index-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Expense Ratio & Asset Under Management"
       },
       "tokens": [
@@ -5931,11 +5931,11 @@
         "direct",
         "growth",
         "is",
-        "020",
+        "050",
         "as",
         "of",
-        "may",
-        "1",
+        "june",
+        "4",
         "2026",
         "the",
         "total",
@@ -5945,18 +5945,18 @@
         "aum",
         "is",
         "rs",
-        "180",
+        "1531591",
         "crores",
         "as",
         "of",
-        "may",
+        "june",
         "2026"
       ],
       "tf": {
-        "1": 0.027777777777777776,
+        "4": 0.027777777777777776,
         "50": 0.05555555555555555,
-        "180": 0.027777777777777776,
         "2026": 0.05555555555555555,
+        "1531591": 0.027777777777777776,
         "scheme": 0.027777777777777776,
         "zerodha": 0.05555555555555555,
         "nifty": 0.05555555555555555,
@@ -5970,8 +5970,8 @@
         "asset": 0.05555555555555555,
         "management": 0.05555555555555555,
         "content": 0.027777777777777776,
-        "020": 0.027777777777777776,
-        "may": 0.05555555555555555,
+        "050": 0.027777777777777776,
+        "june": 0.05555555555555555,
         "total": 0.027777777777777776,
         "aum": 0.027777777777777776,
         "rs": 0.027777777777777776,
@@ -5986,7 +5986,7 @@
         "scheme_name": "Zerodha Nifty 50 Index Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/zerodha-nifty-50-index-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Exit Load Structure"
       },
       "tokens": [
@@ -6042,7 +6042,7 @@
         "scheme_name": "Zerodha Nifty 50 Index Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/zerodha-nifty-50-index-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Minimum Investment Details"
       },
       "tokens": [
@@ -6106,7 +6106,7 @@
         "scheme_name": "Zerodha Nifty 50 Index Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/zerodha-nifty-50-index-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Fund Management Details"
       },
       "tokens": [
@@ -6190,7 +6190,7 @@
         "scheme_name": "Zerodha Nifty 50 Index Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/zerodha-nifty-50-index-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Riskometer & Benchmark Index"
       },
       "tokens": [
@@ -6256,7 +6256,7 @@
         "scheme_name": "Zerodha Nifty 50 Index Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/zerodha-nifty-50-index-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "ELSS Lock-in & Lock-in Periods"
       },
       "tokens": [
@@ -6321,7 +6321,7 @@
         "scheme_name": "Zerodha Nifty 50 Index Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/zerodha-nifty-50-index-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Statement Download Procedure Guide"
       },
       "tokens": [
@@ -6401,13 +6401,13 @@
     },
     {
       "id": "aditya-birla-sun-life-gold-fund-direct-growth-chunk-0",
-      "text": "Scheme: Aditya Birla Sun Life Gold Fund Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Aditya Birla Sun Life Gold Fund Direct Growth is 0.50% as of May 1, 2026. The total Asset Under Management (AUM) is Rs. 350 Crores as of May 2026.",
+      "text": "Scheme: Aditya Birla Sun Life Gold Fund Direct Growth\nSection: Expense Ratio & Asset Under Management\nContent: The Expense Ratio of Aditya Birla Sun Life Gold Fund Direct Growth is 0.22% as of June 4, 2026. The total Asset Under Management (AUM) is Rs. 4,23,182.21 Crores as of June 2026.",
       "metadata": {
         "chunk_id": "aditya-birla-sun-life-gold-fund-direct-growth-chunk-0",
         "scheme_name": "Aditya Birla Sun Life Gold Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/aditya-birla-sun-life-gold-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Expense Ratio & Asset Under Management"
       },
       "tokens": [
@@ -6440,11 +6440,11 @@
         "direct",
         "growth",
         "is",
-        "050",
+        "022",
         "as",
         "of",
-        "may",
-        "1",
+        "june",
+        "4",
         "2026",
         "the",
         "total",
@@ -6454,17 +6454,17 @@
         "aum",
         "is",
         "rs",
-        "350",
+        "42318221",
         "crores",
         "as",
         "of",
-        "may",
+        "june",
         "2026"
       ],
       "tf": {
-        "1": 0.02631578947368421,
-        "350": 0.02631578947368421,
+        "4": 0.02631578947368421,
         "2026": 0.05263157894736842,
+        "42318221": 0.02631578947368421,
         "scheme": 0.02631578947368421,
         "aditya": 0.05263157894736842,
         "birla": 0.05263157894736842,
@@ -6480,8 +6480,8 @@
         "asset": 0.05263157894736842,
         "management": 0.05263157894736842,
         "content": 0.02631578947368421,
-        "050": 0.02631578947368421,
-        "may": 0.05263157894736842,
+        "022": 0.02631578947368421,
+        "june": 0.05263157894736842,
         "total": 0.02631578947368421,
         "aum": 0.02631578947368421,
         "rs": 0.02631578947368421,
@@ -6496,7 +6496,7 @@
         "scheme_name": "Aditya Birla Sun Life Gold Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/aditya-birla-sun-life-gold-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Exit Load Structure"
       },
       "tokens": [
@@ -6564,7 +6564,7 @@
         "scheme_name": "Aditya Birla Sun Life Gold Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/aditya-birla-sun-life-gold-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Minimum Investment Details"
       },
       "tokens": [
@@ -6630,7 +6630,7 @@
         "scheme_name": "Aditya Birla Sun Life Gold Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/aditya-birla-sun-life-gold-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Fund Management Details"
       },
       "tokens": [
@@ -6718,7 +6718,7 @@
         "scheme_name": "Aditya Birla Sun Life Gold Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/aditya-birla-sun-life-gold-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Riskometer & Benchmark Index"
       },
       "tokens": [
@@ -6791,7 +6791,7 @@
         "scheme_name": "Aditya Birla Sun Life Gold Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/aditya-birla-sun-life-gold-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "ELSS Lock-in & Lock-in Periods"
       },
       "tokens": [
@@ -6858,7 +6858,7 @@
         "scheme_name": "Aditya Birla Sun Life Gold Fund Direct Growth",
         "document_type": "Factsheet",
         "source_url": "https://groww.in/mutual-funds/aditya-birla-sun-life-gold-fund-direct-growth",
-        "last_updated": "2026-05-01",
+        "last_updated": "2026-06-03",
         "section_header": "Statement Download Procedure Guide"
       },
       "tokens": [
@@ -6949,10 +6949,10 @@
     }
   ],
   "idf": {
-    "1": 1.3019532126861397,
+    "1": 1.6739764335716716,
     "2": 1.955388893009857,
     "3": 1.955388893009857,
-    "4": 2.0794415416798357,
+    "4": 1.5040773967762742,
     "5": 2.782951509275328,
     "6": 3.839452312593311,
     "7": 3.4446824936018943,
@@ -6962,7 +6962,7 @@
     "12": 3.839452312593311,
     "13": 3.839452312593311,
     "14": 3.839452312593311,
-    "15": 3.4446824936018943,
+    "15": 3.839452312593311,
     "16": 3.839452312593311,
     "17": 3.4446824936018943,
     "18": 3.839452312593311,
@@ -6970,20 +6970,11 @@
     "22": 3.839452312593311,
     "50": 2.312535423847214,
     "65": 3.839452312593311,
-    "75": 3.839452312593311,
-    "85": 3.839452312593311,
-    "100": 2.9549102790337356,
-    "105": 3.839452312593311,
-    "110": 3.839452312593311,
-    "120": 3.839452312593311,
-    "125": 3.839452312593311,
-    "180": 3.839452312593311,
-    "210": 3.839452312593311,
+    "100": 2.782951509275328,
+    "151": 3.839452312593311,
     "250": 3.4446824936018943,
-    "350": 3.839452312593311,
     "500": 2.312535423847214,
     "1000": 2.9549102790337356,
-    "1200": 3.839452312593311,
     "2009": 3.839452312593311,
     "2012": 3.839452312593311,
     "2015": 3.839452312593311,
@@ -6994,10 +6985,14 @@
     "2022": 3.4446824936018943,
     "2023": 3.16758253048065,
     "2026": 2.0149030205422647,
-    "2300": 3.839452312593311,
     "5000": 2.515678308454754,
-    "20500": 3.839452312593311,
-    "25000": 3.839452312593311,
+    "329838": 3.16758253048065,
+    "1307450": 3.839452312593311,
+    "1531591": 3.4446824936018943,
+    "4837912": 3.4446824936018943,
+    "5175263": 3.839452312593311,
+    "36602279": 3.16758253048065,
+    "42318221": 3.839452312593311,
     "scheme": 0.6876975757923806,
     "axis": 1.6363453653540248,
     "silver": 2.515678308454754,
@@ -7010,8 +7005,8 @@
     "asset": 1.713797927758343,
     "management": 1.4748477584613358,
     "content": 0.6876975757923806,
-    "015": 3.839452312593311,
-    "may": 2.0149030205422647,
+    "008": 3.839452312593311,
+    "june": 2.0149030205422647,
     "total": 2.0149030205422647,
     "aum": 2.0149030205422647,
     "rs": 1.4748477584613358,
@@ -7087,7 +7082,7 @@
     "pdf": 2.0794415416798357,
     "small": 2.515678308454754,
     "cap": 1.955388893009857,
-    "055": 3.4446824936018943,
+    "079": 3.839452312593311,
     "redeemedswitched": 2.6390573296152584,
     "within": 2.515678308454754,
     "year": 2.6390573296152584,
@@ -7099,7 +7094,7 @@
     "smallcap": 3.839452312593311,
     "tri": 2.515678308454754,
     "liquid": 2.515678308454754,
-    "025": 3.4446824936018943,
+    "012": 3.839452312593311,
     "graduated": 3.839452312593311,
     "based": 3.839452312593311,
     "time": 3.839452312593311,
@@ -7118,7 +7113,8 @@
     "a-i": 3.839452312593311,
     "lic": 1.955388893009857,
     "mf": 1.800976124332979,
-    "020": 3.4446824936018943,
+    "055": 3.839452312593311,
+    "025": 3.839452312593311,
     "switched": 3.839452312593311,
     "days": 3.839452312593311,
     "jaiprakash": 3.839452312593311,
@@ -7153,7 +7149,6 @@
     "paribas": 1.955388893009857,
     "large": 2.515678308454754,
     "mid": 2.515678308454754,
-    "075": 3.839452312593311,
     "sanjay": 3.839452312593311,
     "chawla": 3.839452312593311,
     "midcap": 3.839452312593311,
@@ -7162,7 +7157,7 @@
     "via": 3.4446824936018943,
     "email": 3.4446824936018943,
     "multi": 2.515678308454754,
-    "065": 3.839452312593311,
+    "089": 3.839452312593311,
     "jitendra": 3.839452312593311,
     "sriram": 3.839452312593311,
     "capital": 3.16758253048065,
@@ -7176,7 +7171,7 @@
     "best": 2.515678308454754,
     "class": 2.515678308454754,
     "strategy": 2.515678308454754,
-    "085": 3.839452312593311,
+    "074": 3.839452312593311,
     "chirag": 3.4446824936018943,
     "mehta": 3.4446824936018943,
     "customer": 3.16758253048065,
@@ -7184,10 +7179,11 @@
     "input": 3.16758253048065,
     "fetch": 3.16758253048065,
     "ethical": 2.515678308454754,
-    "095": 3.839452312593311,
+    "075": 3.839452312593311,
     "shariah": 3.839452312593311,
     "dynamic": 2.515678308454754,
     "bond": 2.515678308454754,
+    "048": 3.839452312593311,
     "pankaj": 3.839452312593311,
     "pathak": 3.839452312593311,
     "march": 3.839452312593311,
@@ -7197,7 +7193,7 @@
     "a-iii": 3.839452312593311,
     "zerodha": 1.955388893009857,
     "overnight": 2.515678308454754,
-    "010": 3.839452312593311,
+    "015": 3.839452312593311,
     "charged": 3.4446824936018943,
     "apurv": 3.4446824936018943,
     "sheth": 3.4446824936018943,
@@ -7208,11 +7204,12 @@
     "access": 3.4446824936018943,
     "console": 3.4446824936018943,
     "ledger": 3.4446824936018943,
+    "050": 3.839452312593311,
     "aditya": 2.515678308454754,
     "birla": 2.515678308454754,
     "sun": 2.515678308454754,
     "life": 2.515678308454754,
-    "050": 3.839452312593311,
+    "022": 3.839452312593311,
     "lovelish": 3.839452312593311,
     "solanki": 3.839452312593311,
     "december": 3.839452312593311,
