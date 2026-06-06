@@ -36,128 +36,45 @@ curl -X POST http://localhost:3000/api/chat -H "Content-Type: application/json" 
 ```
 You should see the **live** expense‑ratio (`0.79%`) and a citation date of **June 4 2026**.
 
-## 2️⃣ Production Deployment Options
-### A. Direct VM / Cloud Instance
-1. **Provision a server** (e.g., AWS EC2, Azure VM, DigitalOcean Droplet) with at least 2 GB RAM.
-2. Install Node.js and Git.
-3. Pull the repository and install deps:
-   ```bash
-   git clone <repo-url>
-   cd Mutual-Fund-FAQ
-   npm ci
-   ```
-4. Set up a **systemd** service (or PM2) to keep the process alive:
-   ```ini
-   # /etc/systemd/system/mutual-fund-faq.service
-   [Unit]
-   Description=Mutual Fund FAQ Backend
-   After=network.target
+## 2️⃣ Production Deployment (Railway / Render)
+This project is designed to be easily deployed on a Platform-as-a-Service (PaaS) like [Railway.app](https://railway.app/) or [Render.com](https://render.com/). 
 
-   [Service]
-   WorkingDirectory=/path/to/Mutual-Fund-FAQ
-   ExecStart=/usr/bin/node src/server.js
-   Restart=always
-   Environment=PORT=3000
+**Important Note on Frontend + Backend Deployment:**
+You do **NOT** need a separate service like Vercel for the frontend. Your Node.js backend (Express) is already configured to serve the frontend static files from the `public/` directory. Deploying this project on Railway will host **both** the frontend and the backend simultaneously on the same URL.
 
-   [Install]
-   WantedBy=multi-user.target
-   ```
-   ```bash
-   sudo systemctl daemon-reload
-   sudo systemctl enable --now mutual-fund-faq
-   ```
-5. **Reverse‑proxy** with Nginx (optional) to serve HTTPS and route `/` to the `public/` folder.
-6. **Initial data load** – run `npm run fetch && npm run ingest` once after deployment.
+### Deployment Steps (Railway Example):
+1. Create a free account on Railway.app.
+2. Click **New Project** -> **Deploy from GitHub repo**.
+3. Select your repository: `aanishasethi2028/buildingHours_NextLeap_MutualFundFAQ`.
+4. Railway will automatically detect that it's a Node.js project. It will use `npm install` and `npm start` by default.
+5. Go to the **Variables** tab for your service in Railway and add:
+   - `LLM_API_KEY`: *(Your Groq API Key)*
+6. Railway will build and deploy the app automatically.
 
-### B. Docker Container
-Create a `Dockerfile`:
-```dockerfile
-# Use official Node LTS image
-FROM node:20-alpine
-WORKDIR /app
+### How Auto-Updates (RAG) Work on Railway:
+- Your GitHub Action (`scheduler.yml`) runs daily, scrapes new data, and pushes `schemes_data.json` to the `main` branch.
+- Railway constantly listens to your `main` branch.
+- When the new data is pushed, Railway instantly triggers a new deployment.
+- Upon startup (`npm start`), `server.js` triggers `runIngestion()`, rebuilding the ChromaDB vector index with the fresh data before serving traffic.
+- **Result:** Fully autonomous, zero-downtime updates!
 
-# Copy only needed files
-COPY package*.json ./
-RUN npm ci --only=production
-COPY . .
-
-# Expose the API port
-EXPOSE 3000
-
-# Run ingestion on container start (ensures latest data)
-CMD ["sh", "-c", "npm run fetch && npm run ingest && node src/server.js"]
-```
-Build & run:
-```bash
-docker build -t mutual-fund-faq .
-# Persist the data folder on the host if you want the index to survive container restarts
-docker run -d -p 80:3000 -v $(pwd)/data:/app/data mutual-fund-faq
-```
-You can push the image to any container registry and deploy to services like AWS ECS, Google Cloud Run, or Render.
-
-## 3️⃣ Continuous Deployment (CD) with GitHub Actions
-Add a simple **deployment workflow** that triggers on push to `main`:
-```yaml
-name: Deploy
-on:
-  push:
-    branches: [ main ]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - name: Install deps
-        run: npm ci
-      - name: Build Docker image
-        run: |
-          docker build -t ghcr.io/${{ github.repository }}:latest .
-          echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-          docker push ghcr.io/${{ github.repository }}:latest
-      - name: Deploy to server (SSH)
-        uses: appleboy/ssh-action@v0.1.10
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          script: |
-            docker pull ghcr.io/${{ github.repository }}:latest
-            docker stop mutual-fund-faq || true
-            docker rm mutual-fund-faq || true
-            docker run -d --name mutual-fund-faq -p 80:3000 -v /opt/mutual-fund-faq/data:/app/data ghcr.io/${{ github.repository }}:latest
-```
-*Replace the `SERVER_*` secrets with your own VM details.* This workflow ensures **every push** results in an up‑to‑date container running the latest code and data.
-
-## 4️⃣ Scheduler Verification (Daily Run)
+## 3️⃣ Scheduler Verification (Daily Run)
 - The **Daily Ingestion Scheduler** workflow lives at `.github/workflows/scheduler.yml`.
 - It runs every day at **10:00 AM IST** (cron: `30 4 * * *`).
 - After each run you can verify:
   1. In **GitHub → Actions** you’ll see a successful run entry.
   2. A new commit titled `Auto‑update mutual fund data` appears – open it to see the updated `schemes_data.json`.
-  3. The vector index is rebuilt (`npm run ingest`) automatically, so any newly deployed instance will load the fresh data on startup.
+  3. Railway will detect this commit and automatically redeploy the new data.
 
-## 5️⃣ Monitoring & Logging
-- **Server logs** (stdout) already include timestamps for ingestion (`[2026‑06‑04T…]`). Capture them with a log‑aggregation tool (e.g., Papertrail, Loki) or by configuring Docker’s logging driver.
-- **GitHub Actions** provides the full console output for each run – you can download the log from the run page.
-- **Health‑check endpoint** (optional):
-  ```js
-  app.get('/health', (req, res) => res.json({status: 'ok', timestamp: new Date()}));
-  ```
-  Add this to `src/server.js` and monitor it with a service like UptimeRobot.
+## 4️⃣ Monitoring & Logging
+- **Server logs** (stdout) are automatically captured by Railway. You can view them in the Railway dashboard under the "Deployments" tab to see exactly when ingestion completes.
+- **GitHub Actions** provides the full console output for the daily scraping job.
 
 ---
 ### Quick Checklist for Production
-- [ ] Install Node 20 on target host (or use Docker). 
-- [ ] Pull repository and run `npm ci`. 
-- [ ] Run `npm run fetch && npm run ingest` once to populate the DB. 
-- [ ] Set up a systemd/PM2/Docker container to keep `src/server.js` running. 
-- [ ] Expose the service behind HTTPS (Nginx/Traefik). 
-- [ ] Verify the **Daily Ingestion Scheduler** workflow is enabled and successful. 
-- [ ] (Optional) Add the CD workflow above for zero‑downtime updates.
+- [ ] Connect repository to Railway/Render. 
+- [ ] Set `LLM_API_KEY` in environment variables.
+- [ ] Verify the **Daily Ingestion Scheduler** workflow is enabled and successful on GitHub. 
+- [ ] Test the chatbot on the live Railway URL.
 
 With these steps the Mutual Fund FAQ Assistant will always serve **the latest fund data** to end‑users, automatically refreshed every day.
